@@ -30,6 +30,18 @@ Add the marketplace, then install the plugin:
 | `/shape-up:breadboard-reflection` | Sync a breadboard to implementation and detect design smells |
 
 
+## Hooks
+
+**Ripple check** fires automatically whenever Claude edits a shaping document. It injects a reminder into Claude's context before it continues, prompting it to keep downstream documents consistent:
+
+- Changed a breadboard diagram? Update the 4 affordance tables in `shape.md` first, then re-render the Mermaid diagram.
+- Changed requirements (R) in `shape.md`? Update the Fit Check; update `slices.md` if the winning shape changes.
+- Changed shape parts (S) in `shape.md`? Update the Fit Check.
+- Changed `slices.md`? Update the affected `S#-plan.md` files.
+- Changed an `S#-plan.md`? Update the slice summary in `slices.md` if scope changed.
+
+The hook only fires on documents that carry `shaping: true` in the first five lines of frontmatter. The skills write this automatically - `frame.md`, `shape.md`, `slices.md`, and `S#-plan.md` all get the flag. To opt a custom document in, add `shaping: true` to its YAML frontmatter.
+
 ## Problem
 
 During longer development phases, AI starts to get sloppy, derails, and ignores `YAGNI` written in system prompts or `CLAUDE.md` files. This happens in Scrum too, where scope gets cut or features get delayed once developers realize the problem is bigger than the estimated story points or product owners want to add a feature forgotten in the initial concept of an epic.
