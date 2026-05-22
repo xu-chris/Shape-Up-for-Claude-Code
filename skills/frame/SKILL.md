@@ -7,9 +7,9 @@ description: Use when a raw idea, request, or complaint surfaces before any solu
 
 Framing is detective work on the problem. It narrows a vague candidate down to a specific failure with a specific cost, and confirms the business has urgency and appetite to invest in solving it.
 
-The output is the Frame section of `docs/concepts/[name].md`. This document carries the work through shaping, betting, and building. The Frame is not a commitment to build — it is a commitment to shape.
+The output is `docs/concepts/[name]/frame.md`. This document carries the framing work forward. The Frame is not a commitment to build - it is a commitment to shape.
 
-**Framing is entirely about the problem. No solution territory, no breadboards, no technical discussion — those belong to shaping.**
+**Framing is entirely about the problem. No solution territory, no breadboards, no technical discussion - those belong to shaping.**
 
 ## The Iron Law
 
@@ -17,9 +17,9 @@ The output is the Frame section of `docs/concepts/[name].md`. This document carr
 NO SOLUTION TERRITORY IN FRAMING
 ```
 
-Violating the letter of this rule is violating the spirit of it. If a breadboard appears, if a technical option is discussed, if implementation is mentioned — stop. Return to the problem.
+Violating the letter of this rule is violating the spirit of it. If a breadboard appears, if a technical option is discussed, if implementation is mentioned - stop. Return to the problem.
 
-When the user introduces solution ideas during framing, name the idea and park it explicitly: "That belongs in shaping — I'll note it. Back to the problem: [return to the question at hand]." Do not absorb solution territory into the framing conversation.
+When the user introduces solution ideas during framing, name the idea and park it explicitly: "That belongs in shaping - I'll note it. Back to the problem: [return to the question at hand]." Do not absorb solution territory into the framing conversation.
 
 ## Phase 1: Confirm the Impetus
 
@@ -27,7 +27,7 @@ When the user introduces solution ideas during framing, name the idea and park i
 
 Someone already has a sense of urgency: a customer at risk, a recurring complaint, a strategic shift, a deal being lost. Find it. Framing without impetus produces a conversation that circles without landing.
 
-Ask for the appetite signal before working the seven topics — how much time would be worth spending if the problem turns out to be real? Appetite constrains the entire framing conversation and defines what counts as a good enough answer.
+Ask for the appetite signal before working the seven topics - how much time would be worth spending if the problem turns out to be real? Appetite constrains the entire framing conversation and defines what counts as a good enough answer.
 
 **Gate:** A business reason for investigating this problem *now* is explicit, and an appetite signal has been named.
 
@@ -40,7 +40,7 @@ IF appetite has not been named → ask for it before working the questions
 
 **Goal:** Narrow the candidate from a label to a specific failure with a specific cost.
 
-Framing is active detective work — live data, customer research, subject matter experts. The raw request is just the starting label. Cover all seven topics through the conversation. The questioning approach can be organic — follow what the person in the room shows you, follow live data, follow what the subject matter expert reveals. Do not declare Frame Go until each topic has a specific, non-label answer. Push back on vague responses.
+Framing is active detective work - live data, customer research, subject matter experts. The raw request is just the starting label. Cover all seven topics through the conversation. The questioning approach can be organic - follow what the person in the room shows you, follow live data, follow what the subject matter expert reveals. Do not declare Frame Go until each topic has a specific, non-label answer. Push back on vague responses.
 
 **1. What is the raw request?**
 Write it exactly as it came in: "Improve the dashboard." "Users are churning." This is the label, not the problem.
@@ -49,13 +49,13 @@ Write it exactly as it came in: "Improve the dashboard." "Users are churning." T
 Which user, role, or segment? Avoid "all users." Narrow to where the pain is sharpest.
 
 **3. What are they doing today instead?**
-The workaround. The problem exists right now — people are working around it. What is their current workaround? This surfaces the real situation, not a hypothetical.
+The workaround. The problem exists right now - people are working around it. What is their current workaround? This surfaces the real situation, not a hypothetical.
 
 **4. What goes wrong because of that?**
 The cost of the workaround. What breaks, stalls, creates risk, or causes frustration? This is the key flip: from "what good happens if we do it" to "what goes wrong if we don't." The cost of inaction is the measure of the problem's actual weight.
 
 **5. Why does this matter now?**
-What triggered this conversation. "It's always been a problem" is not an answer — dig for the specific trigger.
+What triggered this conversation. "It's always been a problem" is not an answer - dig for the specific trigger.
 
 **6. Is this specific enough to shape?**
 A well-framed problem can be handed to a shaper who knows exactly what to investigate. If it's still a label, keep narrowing.
@@ -63,7 +63,7 @@ A well-framed problem can be handed to a shaper who knows exactly what to invest
 **7. Is the appetite still right?**
 Given what you now know, does the original appetite match the problem's actual size?
 
-**Gate:** Do not move to Phase 3 until all seven topics have specific, non-label answers. The problem must be described as a failure with a cost for a specific segment — not a feature request or label.
+**Gate:** Do not move to Phase 3 until all seven topics have specific, non-label answers. The problem must be described as a failure with a cost for a specific segment - not a feature request or label.
 
 ```
 IF the problem is still stated as a label ("improve X", "add notifications") → strip the label, narrow further
@@ -106,22 +106,22 @@ IF language is still vague after narrowing → find the domain expert who has th
 
 ## Output
 
-When the three phases pass, write the concept document to `docs/concepts/[name].md`. Fill in the Frame section. Leave Solution, Bet, and Build as empty placeholders — shaping, betting, and building will complete them.
+When the three phases pass, write `docs/concepts/[name]/frame.md`, creating the folder if it does not exist. The bet skill appends its decision to this file. Include `Less about / More about` only when there is an obvious wrong direction someone could take from reading the problem statement.
 
-Name the document after the sharpened problem domain, not the anticipated solution. The name should reflect the failure being framed: `payment-recovery.md`, not `dashboard-redesign.md`.
+Name the concept folder after the sharpened problem domain, not the anticipated solution. The name should reflect the failure being framed: `payment-recovery/`, not `dashboard-redesign/`.
 
-**Do not write the Frame section until all of the following are confirmed:**
+**Do not write the frame document until all of the following are confirmed:**
 - Appetite has been explicitly named
-- Specific segment identified — not "all users"
+- Specific segment identified - not "all users"
 - Workaround named: what they do today instead
 - Cost named: what goes wrong because of the workaround
 - "Why now?" answered with a specific trigger
 - One-sentence problem statement confirmed by the person in the room
-- Frame section contains no solution territory
+- Frame document contains no solution territory
 
-Only then write the Frame section.
+Only then write the frame document.
 
-```markdown
+~~~markdown
 ---
 status: frame-go
 appetite:
@@ -131,7 +131,7 @@ cycle:
 # [Concept Name]
 
 ## Problem
-[What is actually going wrong, in one or two sentences. Not the label — the failure.]
+[What is actually going wrong, in one or two sentences. Not the label - the failure.]
 
 ## Who Is Affected
 [The specific segment or role, and why them specifically.]
@@ -150,33 +150,12 @@ cycle:
 
 ---
 
-## Solution
+## Less about
+[What this is not trying to solve - optional, include when a common misreading of the problem would lead someone to propose the wrong kind of solution]
 
-### Elements
-
-### Breadboard
-
-### Rabbit Holes
-
-### Dos
-
-### Won't-Dos
-
----
-
-## Bet
-
-### Decision
-
-### Conditions
-
-### Cycle
-
----
-
-## Build
-
-```
+## More about
+[What kind of solution actually fits - optional, symmetric with Less about]
+~~~
 
 Set `status: frame-go` when the checkpoint passes. Set `status: candidate` and note what still needs investigation if it does not.
 
@@ -188,10 +167,10 @@ Frame Go is not permanent. Shaping regularly surfaces questions that cannot be a
 
 | If you're thinking... | Do this |
 |---|---|
-| "It's always been a problem" | No impetus — still a candidate |
-| "Improve X" is still in the problem statement | Strip the label — that is not a problem |
-| A breadboard or technical option has appeared | STOP — no solution territory in framing |
-| The answer is vague but you're moving on | Push back — a vague answer is not an answer |
+| "It's always been a problem" | No impetus - still a candidate |
+| "Improve X" is still in the problem statement | Strip the label - that is not a problem |
+| A breadboard or technical option has appeared | STOP - no solution territory in framing |
+| The answer is vague but you're moving on | Push back - a vague answer is not an answer |
 | You've worked through all questions but the problem is still fuzzy | The domain expert who knows the real name for this has not been consulted |
 | The cost of the workaround is "inefficient but fine" | The problem may not be urgent enough to shape |
 

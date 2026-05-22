@@ -17,7 +17,7 @@ This skill covers WHAT to build (behavior, feedback, copy, error handling, infor
 DESIGN FOR BEHAVIOR AND RECOVERY, NOT APPEARANCE
 ```
 
-Every UI decision passes through this: does this help the user do something, understand something, or recover from something? If it is only about how things look, it is not a design decision — it is a style decision. Style comes after behavior is confirmed.
+Every UI decision passes through this: does this help the user do something, understand something, or recover from something? If it is only about how things look, it is not a design decision - it is a style decision. Style comes after behavior is confirmed.
 
 Violating the letter of this rule is violating the spirit of it.
 
@@ -318,26 +318,26 @@ Task-based audit inspired by Fried's Defensive Design. Role-play as a distracted
 
 | If you're thinking... | Do this |
 |---|---|
-| "Users will figure it out" | Apply "Look like what you do" — if it needs figuring out, redesign it |
-| "We'll handle that error state later" | Apply "Fail gracefully" — error states are not edge cases, design them now |
-| "'Submit' is fine here" | Apply "Speak human" — every button needs verb + object |
-| "The empty state is obvious" | Apply "Close the loop" — explain why it's empty and what to do |
-| "Generic 'Something went wrong' is enough" | Apply "Fail gracefully" — say what happened, why, and what to do next |
-| "We'll polish the error messages before launch" | Apply "Fail gracefully" — error messages are core behavior, not polish. Write them now. |
+| "Users will figure it out" | Apply "Look like what you do" - if it needs figuring out, redesign it |
+| "We'll handle that error state later" | Apply "Fail gracefully" - error states are not edge cases, design them now |
+| "'Submit' is fine here" | Apply "Speak human" - every button needs verb + object |
+| "The empty state is obvious" | Apply "Close the loop" - explain why it's empty and what to do |
+| "Generic 'Something went wrong' is enough" | Apply "Fail gracefully" - say what happened, why, and what to do next |
+| "We'll polish the error messages before launch" | Apply "Fail gracefully" - error messages are core behavior, not polish. Write them now. |
 
 ## Rationalization Table
 
 | Excuse | Reality |
 |---|---|
 | "That error state is unlikely" | Plan for every failure. Unlikely states are the ones that destroy trust when they happen. |
-| "Users can read the label" | Users don't read — they click and discover. Design for that. |
+| "Users can read the label" | Users don't read - they click and discover. Design for that. |
 | "The confirmation dialog is self-explanatory" | "Are you sure?" tells the user nothing. Name what will be affected. |
 | "We'll add the empty state later" | Empty states are first impressions for new users. Design them first. |
 | "High fidelity first so stakeholders can see it" | Wire behavior first. Behavior must be confirmed before appearance is worth investing in. |
 
 ## Quick Reference
 
-Maps the audit scenarios to the core principles they test — when an audit item fails, apply the listed principles to fix it.
+Maps the audit scenarios to the core principles they test - when an audit item fails, apply the listed principles to fix it.
 
 | Audit scenario | Core principles to apply |
 |---|---|

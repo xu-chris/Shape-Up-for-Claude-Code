@@ -5,7 +5,7 @@ description: Use when a scopes document exists and building is ready to begin on
 
 # Scope Breakdown
 
-Scope breakdown translates one scope from the scopes document into a concrete sequence of tasks. It happens at the start of work on that scope — not all at once before building begins. Breaking down all scopes upfront produces plans that are wrong by the time you reach them. Learning from each scope informs the next.
+Scope breakdown translates one scope from the scopes document into a concrete sequence of tasks. It happens at the start of work on that scope - not all at once before building begins. Breaking down all scopes upfront produces plans that are wrong by the time you reach them. Learning from each scope informs the next.
 
 **One scope at a time. Work through it. Learn. Then break down the next.**
 
@@ -17,7 +17,7 @@ Scope breakdown translates one scope from the scopes document into a concrete se
 ONE SCOPE AT A TIME. BREAK DOWN AT THE START OF THAT SCOPE, NOT ALL UPFRONT.
 ```
 
-Violating the letter of this rule is violating the spirit of it. Plans written far in advance are wrong when executed — each scope teaches something that changes what comes next.
+Violating the letter of this rule is violating the spirit of it. Plans written far in advance are wrong when executed - each scope teaches something that changes what comes next.
 
 ## Phase 1: Understand What the Scope Delivers
 
@@ -36,7 +36,7 @@ IF the scope description is vague → clarify with the user before proceeding
 
 **Goal:** Produce a flat list of what needs to exist for this flow to work end to end.
 
-Walk through the breadboard sections in the concept document that belong to this scope. Ask: what has to be built for this flow to work end to end? Keep it as a flat list — do not organize by layer yet.
+Walk through the breadboard sections in the concept document that belong to this scope. Ask: what has to be built for this flow to work end to end? Keep it as a flat list - do not organize by layer yet.
 
 Then check for vertical coverage. A vertical slice reaches through all layers needed to produce a demoable behavior: from the data or logic that drives it, through whatever connects them, to the interface the user touches.
 
@@ -50,7 +50,7 @@ IF all items are UI work → same: what must come together to make this scope wo
 
 ## Phase 3: Investigate the Relevant Code
 
-**Goal:** Read code before sequencing tasks — not after.
+**Goal:** Read code before sequencing tasks - not after.
 
 Search for existing implementations related to the breadboard places and affordances: data models, queries, API handlers, UI components, utilities. Understand what already exists, what patterns are established, and where this scope extends or modifies existing behavior.
 
@@ -75,11 +75,11 @@ IF investigation surfaces an unpatched rabbit hole:
 
 The first task establishes the foundation the other tasks depend on. If the scope has a rabbit hole identified in the concept document, the task that addresses it comes early.
 
-**Wiring before finish.** Tasks that get the mechanics working come before tasks that make things look right. A scope is done when it works, not when it is polished. Polish is the last task, not the first priority. Very often, wiring with raw or inherited UI is enough to confirm the mechanics — high fidelity comes after the wiring is confirmed.
+**Wiring before finish.** Tasks that get the mechanics working come before tasks that make things look right. A scope is done when it works, not when it is polished. Polish is the last task, not the first priority. Very often, wiring with raw or inherited UI is enough to confirm the mechanics - high fidelity comes after the wiring is confirmed.
 
-Not every task needs the same level of finish. For well-understood, routine work (standard auth flows, known patterns), a stub that unblocks more critical tasks is enough — move through the known quickly and put focus on the unknown. A stub is not an excuse to skip the unknown; it is a way to sequence effort correctly.
+Not every task needs the same level of finish. For well-understood, routine work (standard auth flows, known patterns), a stub that unblocks more critical tasks is enough - move through the known quickly and put focus on the unknown. A stub is not an excuse to skip the unknown; it is a way to sequence effort correctly.
 
-Where tasks are independent, flag them explicitly — they can run in parallel.
+Where tasks are independent, flag them explicitly - they can run in parallel.
 
 **Gate:** Task list is ordered with highest-uncertainty tasks first. Dependencies are explicit.
 
@@ -89,10 +89,10 @@ Where tasks are independent, flag them explicitly — they can run in parallel.
 
 For each task: one to three acceptance criteria describing behavior, not implementation.
 
-- "The panel shows the three most recent missed payments for the current member" — behavior ✓
-- "The query returns results" — implementation ✗
+- "The panel shows the three most recent missed payments for the current member" - behavior ✓
+- "The query returns results" - implementation ✗
 
-**Gate:** Every acceptance criterion describes observable behavior. If criteria are hard to write, the task is too vague — restate it until the done condition is clear.
+**Gate:** Every acceptance criterion describes observable behavior. If criteria are hard to write, the task is too vague - restate it until the done condition is clear.
 
 ## Phase 6: Propose and Confirm
 
@@ -149,7 +149,7 @@ IF superpowers is available:
   → invoke superpowers:writing-plans for this scope
     The scope description, demoable outcome, and "Done when:" conditions are the spec
     writing-plans adds the implementation layer: file structure, TDD task sequence, exact code, exact commands
-    Shape Up ends here — building begins with superpowers
+    Shape Up ends here - building begins with superpowers
 ELSE:
   → implement the tasks directly using the confirmed task list and acceptance criteria as the guide
 ```
@@ -158,12 +158,12 @@ ELSE:
 
 | If you're thinking... | Do this |
 |---|---|
-| "I'll break down all scopes now while I'm thinking about it" | STOP — one scope at a time, at the start of that scope |
-| "Tasks named by layer are clearer" | Regroup around behavior — layer names are not task names |
+| "I'll break down all scopes now while I'm thinking about it" | STOP - one scope at a time, at the start of that scope |
+| "Tasks named by layer are clearer" | Regroup around behavior - layer names are not task names |
 | "This acceptance criterion describes the implementation" | Rewrite it to describe observable behavior |
-| "The task list is 14 items but they're all necessary" | STOP — surface the situation, do not continue |
-| "I'll just include this task, it's obviously in scope" | Flag it explicitly — obvious is not confirmed |
-| "I'll quietly narrow the scope to make it fit" | Surface it and confirm — silently shrinking is the same problem as silently expanding |
+| "The task list is 14 items but they're all necessary" | STOP - surface the situation, do not continue |
+| "I'll just include this task, it's obviously in scope" | Flag it explicitly - obvious is not confirmed |
+| "I'll quietly narrow the scope to make it fit" | Surface it and confirm - silently shrinking is the same problem as silently expanding |
 
 ## Rationalization Table
 
@@ -171,7 +171,7 @@ ELSE:
 |---|---|
 | "Breaking down all scopes upfront is more efficient" | Plans for future scopes are wrong when you reach them |
 | "The task names make sense to me" | Task names must be traceable to the problem in domain language |
-| "Acceptance criteria are obvious from the task name" | Unwritten criteria are not criteria — write them |
+| "Acceptance criteria are obvious from the task name" | Unwritten criteria are not criteria - write them |
 | "The rabbit hole is smaller than it looks" | Unpatched rabbit holes surface in build. Surface them now. |
 | "High fidelity now saves time later" | Wire first. Confirm the mechanics. Polish after. |
 

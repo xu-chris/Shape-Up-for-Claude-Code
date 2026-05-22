@@ -27,6 +27,7 @@ Add the marketplace, then install the plugin:
 | `/shape-up:scope` | Break one scope into concrete tasks with acceptance criteria |
 | `/shape-up:ux-design` | Design UI behavior, write user-facing copy, audit interfaces for usability |
 | `/shape-up:breadboarding` | Surface UI and code affordances, run fit check, generate wiring diagram |
+| `/shape-up:breadboard-reflection` | Sync a breadboard to implementation and detect design smells |
 
 
 ## Problem
