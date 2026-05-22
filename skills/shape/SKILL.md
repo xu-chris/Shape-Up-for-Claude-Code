@@ -78,33 +78,11 @@ Name elements in the domain's language. An element name the person who lives wit
 
 ## Phase 3: Breadboard the Flow
 
-**Goal:** Map how users move through the solution using places, affordances, and connections — nothing more.
+**Goal:** Map how users move through the solution using places, affordances, and flows — nothing more.
 
-- **Places:** screens, dialogs, states — anywhere the user finds themselves
-- **Affordances:** buttons, fields, links, messages — anything the user can interact with or read
-- **Connections:** where an affordance takes the user
+Invoke `shape-up:breadboarding` now. Do not continue this skill until it completes.
 
-```
-Place Name
-----------
-  affordance
-  action → Next Place
-
-Next Place
-----------
-  field or input
-  action → Another Place
-```
-
-Breadboard the critical path first. Then breadboard significant branches the appetite allows for.
-
-**Gate:** No layout, no visual design, no exact copy, no component names. Only topology: what exists where and how it connects.
-
-```
-IF the breadboard contains column widths, component names from a design system, styling notes,
-or descriptions of how something looks rather than what it is and where it goes
-  → strip it back to places, affordances, and connections
-```
+Do not proceed to Phase 4 until the breadboarding skill's play-through finds no gaps and the wiring diagram is written to the document.
 
 ## Phase 4: Find the Rabbit Holes
 
@@ -136,6 +114,8 @@ Won't-dos are intentional exclusions that protect the appetite, each with a rati
 
 Go through the elements and breadboard and ask: what could someone reasonably assume is included that we are not building? Make those assumptions explicit as won't-dos.
 
+Do not declare Shape Go until you have produced an explicit Won't-Dos list. Decisions made in framing do not carry over automatically — restate them here. A reader who was not in the framing conversation must be able to understand what is excluded and why.
+
 **Gate:** Every reasonable scope assumption is named explicitly — nothing left to inference.
 
 ## Phase 6: Three Properties Check
@@ -150,10 +130,15 @@ Apply these throughout shaping, not only at the end — ongoing discipline catch
 
 **Bounded:** Does the solution fit the appetite? Are the won't-dos explicit? Does every rabbit hole have a patch?
 
-**Gate:** All three properties pass.
+**Gate:** All three properties pass. For each property, state the evidence — not the intention.
+
+- "Rough: ✓" is not evidence. "Rough: elements described as named concepts, no database schema, no component names, no exact copy" is evidence.
+- "Solved: ✓" is not evidence. "Solved: all elements connected in breadboard, no TBDs, open question about X resolved as Y" is evidence.
+- "Bounded: ✓" is not evidence. "Bounded: Won't-Dos list produced, crew/cast excluded, file upload excluded, appetite fits build estimate" is evidence.
 
 ```
 IF any property fails → keep shaping. Do not write a shape-go that is not actually shaped.
+IF the check passes in under a minute → you have not done it.
 ```
 
 ## Output
@@ -193,7 +178,7 @@ The document captures the a-ha moment in packaging form. It should bring anyone 
 |---|---|---|
 | 1. Read the Frame | Absorb appetite and language | Appetite fixed in mind, language noted |
 | 2. Name Elements | 3–7 building blocks in domain language | Each in 1–2 sentences, no technical terms |
-| 3. Breadboard | Places, affordances, connections only | No visual design, no component names |
+| 3. Breadboard | Invoke shape-up:breadboarding | Play-through finds no gaps; diagram written |
 | 4. Rabbit Holes | Identify risks, patch each one | Every rabbit hole has a specific patch |
 | 5. Dos and Won't-Dos | Make all scope assumptions explicit | Nothing left to inference |
 | 6. Three Properties | Rough, solved, bounded | All three pass before writing |
