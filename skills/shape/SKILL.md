@@ -31,6 +31,8 @@ Shaped work lives at the fat-marker sketch level. This is the hardest discipline
 
 A shaped solution is the blueprint of a house: where the walls go, where the sink goes, where the pipes run. Not the tile, not the paint, not the fixtures. Those decisions happen during building, by the people doing the work.
 
+This discipline governs element descriptions (Phase 2) and the overall solution narrative. Phase 3 breadboarding operates at a more technical level by design — code affordances include function signatures and data store references. The breadboarding skill defines its own abstraction standard for that phase.
+
 ```
 WHEN describing any element or flow step:
   IF you are specifying visual design, exact copy, component names, database schemas, or API specs
@@ -177,7 +179,7 @@ The document captures the a-ha moment in packaging form. It should bring anyone 
 | Phase | Key Activity | Gate |
 |---|---|---|
 | 1. Read the Frame | Absorb appetite and language | Appetite fixed in mind, language noted |
-| 2. Name Elements | 3–7 building blocks in domain language | Each in 1–2 sentences, no technical terms |
+| 2. Name Elements | 3–7 building blocks in domain language | Each in 1–2 sentences, named in domain language |
 | 3. Breadboard | Invoke shape-up:breadboarding | Play-through finds no gaps; diagram written |
 | 4. Rabbit Holes | Identify risks, patch each one | Every rabbit hole has a specific patch |
 | 5. Dos and Won't-Dos | Make all scope assumptions explicit | Nothing left to inference |

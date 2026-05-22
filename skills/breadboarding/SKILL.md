@@ -1,13 +1,13 @@
 ---
 name: breadboarding
-description: Use when shaping a solution and you need to surface what exists where, what it calls, and how information flows between places — UI and code affordances with their wiring.
+description: Use when a concept needs to be prototyped at the wiring level — to visualize and verify what exists where, what it calls, and how information flows between places.
 ---
 
 # Breadboarding
 
-Breadboarding is the technical wiring phase of shaping. It surfaces every UI affordance, every code affordance, and the flows between them. The output is a wiring diagram that shows builders what exists, where it lives, and what it connects to — without any visual design.
+Breadboarding is a lightweight prototyping technique for visualizing and verifying a concept at the wiring level — before any visual design or implementation begins. It surfaces every UI affordance, every code affordance, and the flows between them. The output is a wiring diagram that shows what exists, where it lives, and what it connects to.
 
-This skill executes Phase 3 of the shape skill. Elements named in Phase 2 become the parts of shapes here.
+Use it whenever a concept needs to be made concrete enough to reason about — during shaping, during a design review, or at the start of a build cycle. When invoked from the shape skill, the Phase 2 elements define what must exist; breadboarding defines how those elements connect technically.
 
 **The breadboard is for humans. The tables are for the AI. Both are required outputs.**
 
@@ -39,7 +39,7 @@ Do not draft shapes until the requirements table is complete.
 
 ## Step 2: Draft Shapes
 
-Draft 1–2 alternative solution concepts as numbered part lists. Each part is a named component of the solution. Sub-items describe the mechanism, not implementation detail.
+A shape is a proposed technical wiring of the Phase 2 elements — how they connect, what handles what, what stores what. Draft 1–2 alternative wirings as numbered part lists. Each part is a named component. Sub-items describe the mechanism, not pixel-level implementation detail.
 
 ```
 A: [Shape name]
@@ -61,6 +61,8 @@ Compare each shape against every requirement. Mark each cell:
 | ID | Requirement | CURRENT | A | B |
 |---|---|---|---|---|
 | R0 | [statement] | ✗ | ✓ | ✓ |
+
+The CURRENT column shows what the existing system does today — used to confirm the winning shape actually improves on the status quo, not just that it satisfies the requirement in isolation.
 
 Select the shape where all requirements are `✓`. If no shape passes, identify the failing requirements and revise that shape. Do not proceed to Step 4 with an open `✗` in the winning column.
 
