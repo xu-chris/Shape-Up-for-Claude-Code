@@ -280,9 +280,18 @@ Each slice must:
 - Demonstrate a mechanism working toward the R
 - Include a one-sentence demo statement: "Type a query, results filter live"
 
-Assign each affordance to the slice where it is first needed. Write output to:
-- `docs/concepts/[name]/slices.md` - slice summary + per-slice affordance tables
-- `docs/concepts/[name]/S1-plan.md`, `S2-plan.md`, etc. - individual slice implementation plans
+Assign each affordance to the slice where it is first needed. Add a Slices section to `shape.md` showing the grouping:
+
+```markdown
+## Slices
+
+| Slice | Affordances | Demo statement |
+|-------|-------------|----------------|
+| S1    | U1, N1, S1  | [one sentence] |
+| S2    | U2, N2      | [one sentence] |
+```
+
+This grouping is the input kickoff uses to map scopes. The `slices.md` document is written by the kickoff skill; individual `S#-plan.md` files are written by the scope skill.
 
 ## Red Flags
 

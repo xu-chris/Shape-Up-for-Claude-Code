@@ -57,6 +57,13 @@ IF investigation reveals an unpatched rabbit hole or a critical gap not addresse
   → Get a decision: patch with a constraint, return concept to shaping, or adjust scope.
 ```
 
+```
+BEFORE PROPOSING ANY SCOPES - confirm both gates passed:
+  Part 1 gate: all ambiguities from the document tour are resolved
+  Part 2 gate: can name reusable components and new territory from the actual code
+IF either gate is open → do not proceed to Part 3
+```
+
 ## Part 3: Map the Scopes Together
 
 **Goal:** Break the work into vertical slices at the whiteboard with the full team.
@@ -125,8 +132,7 @@ Write `docs/concepts/[name]/slices.md`:
 ```markdown
 ---
 shaping: true
-concept: docs/concepts/[name]/shape.md
-status: building
+shape: docs/concepts/[name]/shape.md
 ---
 
 # Slices: [Concept Name]
@@ -164,6 +170,8 @@ Update `frame.md` frontmatter to set `status: building` and add a link to `slice
 | "13 scopes is fine, they're small" | Too granular; regroup around demoable outcomes |
 | "I'll resolve the ambiguity during building" | STOP - resolve before proposing scopes |
 | "The document tour is just a formality, we all read it" | The tour surfaces ambiguities. Run it. |
+| "I already know the codebase, I'll skip Part 2" | STOP - document what you know. The Existing System Context section is required output. |
+| "I'll investigate the code during scope breakdown instead" | STOP - code investigation belongs in Part 2, before scopes are proposed, not after. |
 
 ## Rationalization Table
 

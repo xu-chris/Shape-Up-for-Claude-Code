@@ -11,7 +11,7 @@ A bet has three properties. It has a payout - something meaningful is finished a
 
 In most companies, betting is one-to-one: one candidate is framed, shaped, and green-lit. Alignment is built progressively through framing and shaping - by the time the concept reaches Shape Go, the team already knows this is the thing. The betting step is the final stamp of approval, not a competition between pitches.
 
-**Before starting:** Read the concept document at `docs/concepts/[name].md`. The status must be `shape-go`. If shaping is incomplete, return to shaping. A fuzzy shape produces a bad bet.
+**Before starting:** Read `docs/concepts/[name]/frame.md` and `docs/concepts/[name]/shape.md`. The status in `frame.md` must be `shape-go`. If shaping is incomplete, return to shaping. A fuzzy shape produces a bad bet.
 
 ## The Iron Law
 
@@ -85,17 +85,21 @@ IF the decision is "both sequentially this cycle" → that is not a bet; one thi
 
 ## Output
 
-When the decision is bet, write to the Bet section of `docs/concepts/[name].md`:
+When the decision is bet, append a Bet section to `docs/concepts/[name]/frame.md`. Do not create a separate file. The bet record lives in `frame.md` alongside the frame that produced it.
 
-**Decision** - one or two sentences stating the bet and the primary reason it was chosen.
+```markdown
+## Bet
 
-**Conditions** - anything that must remain true for the bet to hold. If a dependency shifts or a constraint changes, these conditions surface whether the bet needs revisiting.
+**Decision:** [One or two sentences stating the bet and the primary reason it was chosen.]
 
-**Cycle** - the cycle this is assigned to. A date range, cycle number, or any label that makes the timing concrete.
+**Conditions:** [Anything that must remain true for the bet to hold.]
 
-Set `status: bet` in the frontmatter.
+**Cycle:** [The cycle this is assigned to - date range, cycle number, or label.]
+```
 
-If no bet, update `status: candidate` and add a brief note explaining why this cycle is not the right time. This is not a permanent judgment.
+Update `status: bet` in `frame.md` frontmatter.
+
+If no bet, update `status: candidate` in `frame.md` frontmatter and add a brief note explaining why this cycle is not the right time. This is not a permanent judgment.
 
 ## Red Flags
 
@@ -107,6 +111,7 @@ If no bet, update `status: candidate` and add a brief note explaining why this c
 | "We've been waiting on this one for a while" | Age of a concept is not a reason to bet on it |
 | "A no bet feels like failure" | No bets are discipline. They protect the cycle. |
 | "The technical concerns are minor" | If technical grounding is not visible in the concept, it is a gap |
+| "I'll write the bet to a separate bet.md file" | STOP - append to frame.md. The bet does not get its own file. |
 
 ## Rationalization Table
 

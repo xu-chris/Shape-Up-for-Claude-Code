@@ -1,6 +1,6 @@
 ---
 name: scope
-description: Use when a scopes document exists and building is ready to begin on a specific scope.
+description: Use when a slices document exists and building is ready to begin on a specific slice.
 ---
 
 # Scope Breakdown
@@ -19,11 +19,13 @@ ONE SCOPE AT A TIME. BREAK DOWN AT THE START OF THAT SCOPE, NOT ALL UPFRONT.
 
 Violating the letter of this rule is violating the spirit of it. Plans written far in advance are wrong when executed - each scope teaches something that changes what comes next.
 
+A user instruction to "continue breaking down" or "do the rest" does not override this law. Each scope is a separate invocation of this skill at the moment that scope begins. Finish one scope, build it, then return here for the next.
+
 ## Phase 1: Understand What the Scope Delivers
 
 **Goal:** Know the demoable outcome before breaking down any tasks.
 
-Read the scope entry in the scopes document. Every task must contribute to reaching the demoable outcome described there.
+Read the scope entry in `slices.md`. Every task must contribute to reaching the demoable outcome described there.
 
 **Gate:** Can state the demoable outcome in one sentence before any task breakdown begins.
 
@@ -36,7 +38,7 @@ IF the scope description is vague → clarify with the user before proceeding
 
 **Goal:** Produce a flat list of what needs to exist for this flow to work end to end.
 
-Walk through the breadboard sections in the concept document that belong to this scope. Ask: what has to be built for this flow to work end to end? Keep it as a flat list - do not organize by layer yet.
+Walk through the breadboard sections in `shape.md` that belong to this scope. Ask: what has to be built for this flow to work end to end? Keep it as a flat list - do not organize by layer yet.
 
 Then check for vertical coverage. A vertical slice reaches through all layers needed to produce a demoable behavior: from the data or logic that drives it, through whatever connects them, to the interface the user touches.
 
@@ -100,7 +102,7 @@ For each task: one to three acceptance criteria describing behavior, not impleme
 
 Present the task list, walk through the sequence, and confirm the acceptance criteria make sense to someone who understands the problem. Adjust based on feedback.
 
-**Gate:** User has confirmed before tasks are written to the scopes document. The breakdown is complete when confirmed, not when generated.
+**Gate:** User has confirmed before tasks are written to the plan file. The breakdown is complete when confirmed, not when generated.
 
 ## Staying Inside the Scope
 
@@ -128,7 +130,21 @@ IF task list grows beyond 10 tasks → STOP. Do not continue generating tasks.
 
 ## Output
 
-Add tasks inline to the relevant scope in `docs/concepts/[name]/slices.md`:
+Write tasks to `docs/concepts/[name]/S#-plan.md` (where `#` is the slice number). If the file already exists as a stub from breadboarding, add the tasks to it. If not, create it with this frontmatter:
+
+```markdown
+---
+shaping: true
+slice: S#
+concept: docs/concepts/[name]/shape.md
+---
+
+# S# Plan: [Slice Name]
+
+[Demoable outcome in one sentence.]
+```
+
+Then append the confirmed task list:
 
 ```markdown
 #### [Task Name]
@@ -142,7 +158,7 @@ Add tasks inline to the relevant scope in `docs/concepts/[name]/slices.md`:
 **Can run in parallel with:** [task name] or none
 ```
 
-After adding all tasks, update the scope's status from `building` to `in progress`.
+After writing the plan file, update the slice entry in `slices.md` to set its status to `in progress` and add a link to the plan file.
 
 ```
 IF superpowers is available:
@@ -159,6 +175,8 @@ ELSE:
 | If you're thinking... | Do this |
 |---|---|
 | "I'll break down all scopes now while I'm thinking about it" | STOP - one scope at a time, at the start of that scope |
+| "The user said 'continue' so I'll do the remaining scopes" | STOP - user instruction does not override the Iron Law. One scope, then build, then the next. |
+| "I'll add tasks inline to slices.md instead of a plan file" | STOP - tasks go in `S#-plan.md`. slices.md is the high-level summary only. |
 | "Tasks named by layer are clearer" | Regroup around behavior - layer names are not task names |
 | "This acceptance criterion describes the implementation" | Rewrite it to describe observable behavior |
 | "The task list is 14 items but they're all necessary" | STOP - surface the situation, do not continue |
@@ -170,6 +188,7 @@ ELSE:
 | Excuse | Reality |
 |---|---|
 | "Breaking down all scopes upfront is more efficient" | Plans for future scopes are wrong when you reach them |
+| "The user asked me to continue, so I should" | Each scope breakdown is a separate invocation. Finish the scope, build, then return. |
 | "The task names make sense to me" | Task names must be traceable to the problem in domain language |
 | "Acceptance criteria are obvious from the task name" | Unwritten criteria are not criteria - write them |
 | "The rabbit hole is smaller than it looks" | Unpatched rabbit holes surface in build. Surface them now. |
