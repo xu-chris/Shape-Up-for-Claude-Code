@@ -306,7 +306,9 @@ Assign each affordance to the slice where it is first needed. Write output to:
 
 ## Output
 
-The breadboard tables and Mermaid diagram are written into `docs/concepts/[name]/shape.md` under a Breadboard section. Slicing output goes to `docs/concepts/[name]/slices.md` and `docs/concepts/[name]/S#-plan.md`.
+The breadboard tables and Mermaid diagram are written into `docs/concepts/[name]/shape.md` under a Breadboard section. `shape.md` already carries `shaping: true` in its frontmatter.
+
+Slicing output goes to `docs/concepts/[name]/slices.md` and `docs/concepts/[name]/S#-plan.md`. Both must begin with `shaping: true` in their frontmatter so the ripple-check hook fires on edits.
 
 ## Handoff
 

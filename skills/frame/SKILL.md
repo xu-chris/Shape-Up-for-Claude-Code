@@ -123,6 +123,7 @@ Only then write the frame document.
 
 ~~~markdown
 ---
+shaping: true
 status: frame-go
 appetite:
 cycle:

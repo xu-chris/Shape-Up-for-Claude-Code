@@ -9,11 +9,11 @@ Kickoff transitions from concept to execution. It is a live session with the ful
 
 The kickoff has two parts. First: tour the document together. Second: map the scopes together.
 
-The output is a separate scopes document at `docs/concepts/[name].scopes.md`. The concept document is not modified during kickoff - it remains the reference. The scopes document is the working plan.
+The output is a separate slices document at `docs/concepts/[name]/slices.md`. The concept documents (`frame.md`, `shape.md`) are not modified during kickoff - they remain the reference. The slices document is the working plan.
 
-**No code is written during kickoff. The output is a scopes document, not a pull request.**
+**No code is written during kickoff. The output is a slices document, not a pull request.**
 
-**Before starting:** Read `docs/concepts/[name].md`. The status must be `bet`. If shaping or betting is incomplete, do not proceed. A kickoff from fuzzy shaped work produces confused scopes.
+**Before starting:** Read `docs/concepts/[name]/frame.md` and `docs/concepts/[name]/shape.md`. The status in `frame.md` must be `bet`. If shaping or betting is incomplete, do not proceed. A kickoff from fuzzy shaped work produces confused scopes.
 
 ## The Iron Law
 
@@ -120,18 +120,19 @@ A cycle that begins over-scoped ends without a finished thing.
 
 ## Output
 
-Write `docs/concepts/[name].scopes.md`:
+Write `docs/concepts/[name]/slices.md`:
 
 ```markdown
 ---
-concept: docs/concepts/[name].md
+shaping: true
+concept: docs/concepts/[name]/shape.md
 status: building
 ---
 
-# Scopes: [Concept Name]
+# Slices: [Concept Name]
 
 ## What We're Building
-[Two or three sentences: problem being solved and shaped approach. Enough context to orient anyone reading the scopes document on its own.]
+[Two or three sentences: problem being solved and shaped approach. Enough context to orient anyone reading the slices document on its own.]
 
 ## Existing System Context
 [Reusable components, established patterns, areas where this work extends existing behavior, areas where it introduces something new. Prevents each scope from being planned in isolation.]
@@ -151,7 +152,7 @@ status: building
 [Total scopes vs. appetite. What was cut to fit, if anything.]
 ```
 
-Update the Build section of the concept document with a link to the scopes document and set `status: building`.
+Update `frame.md` frontmatter to set `status: building` and add a link to `slices.md`.
 
 ## Red Flags
 

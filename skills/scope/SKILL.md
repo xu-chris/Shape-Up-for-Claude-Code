@@ -9,7 +9,7 @@ Scope breakdown translates one scope from the scopes document into a concrete se
 
 **One scope at a time. Work through it. Learn. Then break down the next.**
 
-**Before starting:** Read `docs/concepts/[name].scopes.md` and identify the scope to break down. Also read `docs/concepts/[name].md` to have the full concept in view. Tasks must stay within the scope boundary and respect the won't-dos.
+**Before starting:** Read `docs/concepts/[name]/slices.md` and identify the scope to break down. Also read `docs/concepts/[name]/frame.md` and `docs/concepts/[name]/shape.md` to have the full concept in view. Tasks must stay within the scope boundary and respect the won't-dos.
 
 ## The Iron Law
 
@@ -128,7 +128,7 @@ IF task list grows beyond 10 tasks → STOP. Do not continue generating tasks.
 
 ## Output
 
-Add tasks inline to the relevant scope in `docs/concepts/[name].scopes.md`:
+Add tasks inline to the relevant scope in `docs/concepts/[name]/slices.md`:
 
 ```markdown
 #### [Task Name]

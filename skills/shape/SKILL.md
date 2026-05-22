@@ -227,7 +227,14 @@ IF the check passes in under a minute → you have not done it.
 
 ## Output
 
-When the three properties pass, write to `docs/concepts/[name]/shape.md` (create the folder if it does not exist) and set `status: shape-go`.
+When the three properties pass, write to `docs/concepts/[name]/shape.md` (create the folder if it does not exist). The file must begin with this frontmatter:
+
+```
+---
+shaping: true
+status: shape-go
+---
+```
 
 **Shape Go means:** "We can give this to someone to build and they will know what to do. No material unknowns from a technical or interaction standpoint."
 
